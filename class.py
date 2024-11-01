@@ -10,23 +10,39 @@ class Human:
         self.home= home
         self.car = car
     def getjob(self):
-        pass
+        if self.car.drive == True:
+            self.job = Job(jobs)
+        else:
+            self.repair()
     def gethome(self):
-        pass
+        if self.home is None:
+            self.home = Home()
     def getcar(self):
-        pass
+        if self.car is None:
+            self.car = Car(brands)
     def eat(self):
-        pass
+        if self.home.food <= 0:
+            self.shopping("food")
+        else:
+            self.home.food -= 1 and self.satiety + 5
     def work(self):
-        pass
-    def shoppint(self, manage):
-        pass
+        if self.car.drive == True:
+            self.money += self.job.salary and self.happines - 5 and self.satiety - 5
+        else:
+            self.repair()
+    def shopping(self, manage):
+        if manage == "food":
+            self.money -= 10 and self.home.food + 10
+        if manage == "fuel":
+            self.money -= 50 and self.car.fuel + 25
+        if manage == "delicious":
+            self.money -= 25 and self.satiety + 20
     def chill(self):
-        pass
+        self.happines += 10 and self.home.mess + 5
     def clean(self):
-        pass
+        self.happines -= 5 and self.home.mess == 0
     def repair(self):
-        pass
+        self.car.strength += 100 and self.money - 50
     def daysindex(self, day):
         pass
     def isalive(self):
