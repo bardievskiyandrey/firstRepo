@@ -28,9 +28,20 @@ class Student:
         self.zaklad = zaklad
         self.ocenka = ocenka
         print("I am alive")
+    def printStudent(self):
+        logging.debug("method printStudent has started ")
+        print(f"Name: {self.name}")
+        print(f"Surname: {self.surname}")
+        print(f"Birthdate: {self.birthdate.strftime('%d.%m.%Y')}")
+        print(f"Height: {self.height}")
+        logging.debug("method has ended")
     def __bool__(self):
+        logging.debug("method bool has started")
+        logging.debug("method has ended")
         return bool(self.zaklad)
     def __float__(self):
+        logging.debug("method bool has started")
+        logging.debug("method has ended")
         return float(self.ocenka)
 try:
     logging.info("programm started")
