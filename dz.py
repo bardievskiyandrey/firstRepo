@@ -33,15 +33,15 @@ class Student:
     def __float__(self):
         return float(self.ocenka)
 try:
-    first_student = Student(180, "andrew", "andreyovich", "1990-07-10", "akademiya schag", 10)
-    second_student = Student(220, "roma", "romanovich", "2006-01-11", "", 9)
     logging.info("programm started")
-    logging.info(f"first student name: {first_student.name},first student surname: {first_student.surname}")
-    logging.info(f"second student name: {second_student.name}, second student surname: {second_student.surname}")
     logging.debug("In progress...")
-    logging.info("programm ended")
+    first_student = Student(180, "andrew", "andreyovich", "1990-07-10", "akademiya schag", 10)
+    logging.info(f"first student name: {first_student.name},first student surname: {first_student.surname}")
+    second_student = Student(220, "roma", "romanovich", "2025-01-11", "", 9)
+    logging.info(f"second student name: {second_student.name}, second student surname: {second_student.surname}")
 except (TypeError, ValueError) as error:
     logging.exception(error)
+logging.info("programm ended")
 #print(first_student.height, first_student.name, first_student.surname, first_student.birthdate)
 #print(second_student.height, second_student.name, second_student.surname, second_student.birthdate)
 #print(bool(first_student))
