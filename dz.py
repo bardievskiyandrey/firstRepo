@@ -34,14 +34,14 @@ class Student:
         print(f"Surname: {self.surname}")
         print(f"Birthdate: {self.birthdate.strftime('%d.%m.%Y')}")
         print(f"Height: {self.height}")
-        logging.debug("method has ended")
+        logging.debug("method printStudent has ended")
     def __bool__(self):
         logging.debug("method bool has started")
-        logging.debug("method has ended")
+        logging.debug("method bool has ended")
         return bool(self.zaklad)
     def __float__(self):
         logging.debug("method float has started")
-        logging.debug("method has ended")
+        logging.debug("method float has ended")
         return float(self.ocenka)
 try:
     logging.info("programm started")
