@@ -40,7 +40,7 @@ class Student:
         logging.debug("method has ended")
         return bool(self.zaklad)
     def __float__(self):
-        logging.debug("method bool has started")
+        logging.debug("method float has started")
         logging.debug("method has ended")
         return float(self.ocenka)
 try:
